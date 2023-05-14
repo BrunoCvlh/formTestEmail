@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="apiViaCep.js"></script>
+    <title>Cadastro Usuário</title>
+  </head>
+  <body>
+    <div>
+      <h3>Área de Cadastro</h3>
+    </div>
+    <div>
+      <form action="https://formsubmit.co/dimontagnacoffee@gmail.com"
+        method="POST"
+        />
+        <div class="campos-tabela">
+          <label>Nome</label>
+          <input type="text" name="nome" required="" maxlength="45">
+          <label>Sobrenome</label>
+          <input type="text" name="sobrenome"
+            required="" maxlength="45">
+        </div>
+        <br>
+        <div class="campos-tabela">
+          <label>Email</label>
+          <input type="text" name="email" required="" maxlength="130">
+          <label>Celular</label>
+          <input type="text" maxlength="15" name="celular"
+            onkeyup="handlePhone(event)"/>
+        </div>
+        <br>
+        <div class="campos-tabela">
+          <label>CEP</label>
+          <input onchange="buscarCEP()" name="cep" type="text" id="cep"
+            size="10" maxlength="9"
+            onblur="pesquisacep(this.value);" class="form-control"
+            onkeyup="handleZipCode(event)"/>
+          <label>Rua</label>
+          <input type="text" name="rua" id="rua" required="" maxlength="60">
+        </div>
+        <br>
+        <div class="campos-tabela">
+          <label>Bairro</label>
+          <input type="text" name="bairro" id="bairro" required=""
+            maxlength="60">
+          <label>Complemento</label>
+          <input type="text" name="complemento" required="" maxlength="100">
+        </div>
+        <br>
+        <div class="campos-tabela">
+          <label>Cidade</label>
+          <input type="text" name="cidade" id="cidade" required=""
+            maxlength="45">
+          <label>Estado</label>
+          <input type="text" maxlength="2" name="estado" id="uf" required="">
+        </div>
+        <br>
+        <button type="submit" name="submit">Enviar</button>
+        <input type="hidden" name="_subject" value="Novo pedido recebido!">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="index.html">
+      </form>
+    </div>
+  </body>
+</html>
