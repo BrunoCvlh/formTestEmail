@@ -68,10 +68,13 @@
           <input type="text" maxlength="2" name="estado" id="uf" required="">
         </div>
         <br>
-        <a href="formRecived.html" class="botao">Enviar formulário</a>
+        <a href="formRecived.html" class="botao" type="submit" name="submit">Enviar
+          formulário</a>
         <input type="hidden" name="_subject" value="Novo pedido recebido!">
         <input type="text" name="_honey" style="display:none">
         <input type="hidden" name="_captcha" value="false">
-      </div>
-    </body>
-  </html>
+        <input type="hidden" name="_next" value="formRecived.html">
+      </form>
+    </div>
+  </body>
+</html>
