@@ -7,6 +7,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="apiViaCep.js"></script>
     <title>Cadastro Usuário</title>
+    <style>
+      .botao {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      </style>
   </head>
   <body>
     <div>
@@ -58,12 +68,10 @@
           <input type="text" maxlength="2" name="estado" id="uf" required="">
         </div>
         <br>
-        <button type="submit" name="submit">Enviar</button>
+        <a href="index.html" class="botao">Quero enviar novamente</a>
         <input type="hidden" name="_subject" value="Novo pedido recebido!">
         <input type="text" name="_honey" style="display:none">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="formRecived.html">
-      </form>
-    </div>
-  </body>
-</html>
+      </div>
+    </body>
+  </html>
